@@ -908,6 +908,357 @@ BOOKS
 
 
 
+/* 
+
+Change Credentials
+
+*/
+.change_cred{
+    background-color: #7273747A;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.change_cred .box{
+    background-color: #fff;
+    width: 500px;
+    height: 350px;
+    border-radius: 12px;
+    padding: 48px;
+}
+.change_cred .box .title{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.change_cred .box .title .close_btn{
+    margin-left: auto;
+    cursor: pointer;
+    padding: 10px;
+}
+.change_cred .box .title .setting{
+    background-color: #D7D7D7;
+    padding: 12px;
+    border-radius: 10px;
+
+}
+.change_cred .box .title h3{
+    font-weight: 600;
+}
+.change_cred .box .pswd_form{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 15px;
+    margin-top: 20px;
+}
+.change_cred .box .pswd_form .input_box input{
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid #000;
+    width: 200px;
+    height: 10px;
+}
+.change_cred .box .pswd_form .input_box,
+.change_cred .box .pswd_form .item{
+    margin-top: 15px;
+}
+.change_cred .box .btm_btn{
+    display: flex;
+    gap: 10px;
+    margin-top: 40px;
+}
+.change_cred .box .btm_btn .cancel,
+.change_cred .box .btm_btn .confirm{
+    width: 50%;
+    border-radius: 12px;
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 14px 90px;
+    font-weight: 600;
+    transition: all 0.6s ease-in-out;
+    cursor: pointer;
+}
+.change_cred .box .btm_btn .cancel{
+    background-color: #D7D7D7;
+    color: #000;
+}
+
+
+
+/* 
+
+Borrowed Books Popup
+
+*/
+
+
+.brwd_books{
+    background-color: #7273747A;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brwd_books .box{
+    background-color: #fff;
+    width: 700px;
+    max-height: 450px;
+    border-radius: 12px;
+    padding: 48px;
+}
+
+
+.brwd_books .box .brw_data{
+    border-radius: 12px;
+    border: 1px solid #E8E8E8;
+    width: 100%;
+
+}
+
+.brwd_books .box .brw_data th,
+.brwd_books .box .brw_data td {
+  padding: 8px 10px;
+  text-align: center;
+}
+.brwd_books .box .brw_data th{
+    border-bottom: 1px solid #E8E8E8;
+}
+
+
+.brwd_books .box .footer{
+    position:relative;
+    margin-top: 17px;
+    display: flex;
+    align-items: center;
+}
+
+.brwd_books .box .footer .sum_brwd_books{
+    border: 1px solid #E8E8E8;
+    border-radius: 12px;
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    align-items: center;
+}
+
+
+.brwd_books .box .footer .sum_brwd_books .id,
+.brwd_books .box .footer .sum_brwd_books .tbooks_due{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.brwd_books .box .footer .sum_brwd_books .id p{
+    font-size: 1.2rem;
+}
+
+
+.brwd_books .box .footer .close{
+    margin-left: auto;
+    background-color: black;
+    color: white;
+    padding: 10px 74px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* 
+
+Add Book Popup
+
+*/
+
+.add_book{
+    background-color: #7273747A;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.add_book .box{
+    background-color: #fff;
+    width: 500px;
+    height: 350px;
+    border-radius: 12px;
+    padding: 48px;
+}
+
+.add_book .box .adb_head{
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    margin-bottom: 15px;
+}
+.add_book .box .adb_head .book_img{
+    background-color: #D7D7D7;
+    padding: 3px 4px;
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add_book .box .adb_head .book_img img{
+    width: 30px;
+}
+
+.add_book .box .adb_head h4{
+    font-weight: 600;
+
+}
+.add_book .box .adb_head .adb_exit{
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.add_book .box .adb_inputs{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 20px 40px;
+}
+.add_book .box .adb_inputs input{
+    border-radius: 8px;
+    border: 1px solid #3D3E3E;
+    padding: 7px 5px;
+}
+
+.add_book .box .adb_inputs .type_qty{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 5px;
+}
+
+.add_book .box .adb_footer{
+    display: flex;
+    width: 100%;
+    gap: 13px;
+    margin-top: 20px;
+}
+
+
+.add_book .box .adb_footer div{
+    width: 50%;
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 17px 0px;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+.add_book .box .adb_footer div:nth-child(1){
+    background-color: #d7d7d7;
+    color: #000;
+}
+
+.add_book .box .adb_footer div:nth-child(2){
+    background-color: #000;
+    color: #fff;
+}
+
+
+/* 
+
+View Book Popup
+
+*/
+
+
+.v_book .box{
+    width: 550px;
+}
+.v_book .box .disp_book{
+    display: flex;
+    margin-top: 28px;
+    border: 1px solid #DDDDDD;
+    border-radius: 12px;
+    padding: 15px 30px;
+    gap: 45px;
+}
+.v_book .box .disp_book .dbook_info{
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+    line-height: 160%;
+    font-size: 1.1rem;
+    width: 70%;
+}
+.v_book .box .disp_book .dbook_info div{
+    font-size: 1rem;
+}
+
+.v_book .box .disp_book .dbook_info hr{
+    color: #828282;
+    background-color: #828282;
+}
+
+.v_book .box .disp_book .dbook_saved_by{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+.v_book .box .vb_footer{
+    justify-content: center;
+    margin-top: 13px;
+}
+
+.v_book .box .vb_footer div:nth-child(1){
+    text-align: center;
+    background-color: #000;
+    color: white;
+
+}
+
+/* 
+
+Delete Book popup
+
+*/
+
+.del_book .box .del_book_p{
+    padding: 10px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    height: 200px;
+    margin-bottom: auto;
+    font-size: 1.2rem;
+}
+
+.del_book .box h3{
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+
+
+
+
 
 
 
@@ -946,3 +1297,5 @@ BOOKS
     background-color: #000;
     color: #fff;
 }
+
+
