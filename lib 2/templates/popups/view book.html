@@ -3,24 +3,24 @@
 
 <div class="adb_head">
     <div class="book_img">
-        <img src="/images/icon/book-1 1.svg" alt="">
+        <img src="{{ url_for('static', filename='images/icon/book-1 1.svg') }}" alt="">
     </div>
     <h4>View Book</h4>
-    <img class="adb_exit" src="/images/icon/close-square 1.svg" alt="">
+    <img class="adb_exit" src="{{ url_for('static', filename='images/icon/close-square 1.svg') }}" alt="">
 </div>
 <hr>
 <div class="disp_book">
     <div class="dbook_info">
-        <div>Book ID: 1</div>
+        <div>Book ID: {{book.id}}</div>
         <hr>
-        <div>Name: Hibernate - Core</div>
+        <div>Name: {{book.name}}</div>
         <hr>
-        <div>Type: English</div>
+        <div>Type: {{book.book_type}}</div>
         <hr>
-        <div>Language: English</div>
+        <div>Language: {{book.lang}}</div>
         <hr>
     </div>
-    <img src="/images/icon/Line 25.svg" alt="">
+    <img src="{{ url_for('static', filename='images/icon/Line 25.svg') }}" alt="">
     <div class="dbook_saved_by">
         Saved by:
         <br>
@@ -30,8 +30,10 @@
         (Admin)
     </div>
 </div>
-<div class="adb_footer vb_footer">
+<div class="adb_footer vb_footer" onclick="document.location.href ='/books'">
     <div>CLOSE</div>
 </div>
 
 {% endblock box %}
+
+{% block add_user %}v_book {% endblock add_user %}

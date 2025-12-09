@@ -1,7 +1,3 @@
-import email
-from email.policy import default
-from gettext import Catalog
-from os import name
 from flask import Flask, redirect, render_template, request
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
@@ -93,7 +89,15 @@ def signin():
 
 @app.route("/dashboard", methods = ['GET', 'POST'])
 def dashboard():
-    return render_template('dashboard.html')
+    Users = User.query.all()
+    Branches = Branch.query.all()
+    Catalogs = Catalog.query.all()
+    Books = Book.query.all()
+    # for catalog in Catalogs:
+    #     if catalog.due_date and catalog.due_date < datetime.now():
+    #         print(catalog)
+
+    return render_template('dashboard.html', Users =Users, Branches = Branches, Catalogs = Catalogs, Books = Books)
 
 
 
@@ -121,7 +125,16 @@ def reset_psswd():
 
 @app.route("/catalog", methods = ['GET', 'POST'])
 def catalog():
-    return render_template('Catalog.html')
+    # catalog = Catalog(user_id = 101, amount = 29 )
+    # db.session.add(catalog)
+    # db.session.commit()
+    
+    
+    allCatalogs = Catalog.query.all()
+
+
+    
+    return render_template('Catalog.html', allCatalogs = allCatalogs)
 
 @app.route("/books", methods = ['GET', 'POST'])
 def books():
@@ -270,6 +283,24 @@ def delete(id,dbms):
 #     user = User.query.filter_by(id = id).first()
 #     return render_template('popups/delete user.html', btn = "CONFIRM", user = user)
 
+
+
+# View
+
+@app.route("/view_user/<int:id>")
+def view_user(id):
+    user = User.query.filter_by(id = id).first()
+    return render_template('popups/view user.html', user = user, btn = False)
+
+@app.route("/view_branch/<int:id>")
+def view_branch(id):
+    branch = Branch.query.filter_by(id = id).first()
+    return render_template('popups/view branch.html', branch = branch, btn = False)
+
+@app.route("/view_book/<int:id>")
+def view_book(id):
+    book = Book.query.filter_by(id = id).first()
+    return render_template('popups/view book.html', book = book, btn = False)
 
 
 

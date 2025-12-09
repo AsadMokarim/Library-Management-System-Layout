@@ -66,7 +66,9 @@
                         </defs>
                     </svg>
                     <div class="txt">
-                        <h3>0150</h3>
+                        <h3>
+                            {{ Users|length }}
+                        </h3>
                         <h3>Total User Base</h3>
                     </div>
                 </div>
@@ -106,7 +108,10 @@
                         </defs>
                     </svg>
                     <div class="txt">
-                        <h3>01500</h3>
+                        <h3>
+                            {{ Books|length }}
+
+                        </h3>
                         <h3>Total Book Count</h3>
                     </div>
                 </div>
@@ -149,7 +154,10 @@
                         </defs>
                     </svg>
                     <div class="txt">
-                        <h3>0010</h3>
+                        <h3>
+                            {{ Branches|length }}
+                            
+                        </h3>
                         <h3>Total Branch Count</h3>
                     </div>
                 </div>
@@ -312,34 +320,19 @@
             <!-- Branch Network -->
             <div class="branch-net ob-list">
                 <h3>Branch Network</h3>
+                {% for branch in Branches %}
+                    
                 <div class="b-card">
                     <img src="{{ url_for('static', filename='images/icon/buildings-2 1.svg') }}" alt="">
                     <img src="{{ url_for('static', filename='images/icon/Line 17.svg') }}" alt="">
                     <div class="name-id">
-                        <div class="name">BookWorm - Matara</div>
-                        <div class="b-id">Branch ID: 1</div>
+                        <div class="name">{{branch.name}}</div>
+                        <div class="b-id">Branch ID: {{branch.id}}</div>
                     </div>
                     <img src="{{ url_for('static', filename='images/icon/maximize-circle 1.svg') }}" alt="">
                 </div>
-                <div class="b-card">
-                    <img src="{{ url_for('static', filename='images/icon/buildings-2 1.svg') }}" alt="">
-                    <img src="{{ url_for('static', filename='images/icon/Line 17.svg') }}" alt="">
-                    <div class="name-id">
-                        <div class="name">BookWorm - Matara</div>
-                        <div class="b-id">Branch ID: 1</div>
-                    </div>
-                    <img src="{{ url_for('static', filename='images/icon/maximize-circle 1.svg') }}" alt="">
-                </div>
-                <div class="b-card">
-                    <img src="{{ url_for('static', filename='images/icon/buildings-2 1.svg') }}" alt="">
-                    <img src="{{ url_for('static', filename='images/icon/Line 17.svg') }}" alt="">
-                    <div class="name-id">
-                        <div class="name">BookWorm - Matara</div>
-                        <div class="b-id">Branch ID: 1</div>
-                    </div>
-                    <img src="{{ url_for('static', filename='images/icon/maximize-circle 1.svg') }}" alt="">
-                </div>
-                
+                {% endfor %}
+
             </div>
 
             <!-- Branch Netwrok -->

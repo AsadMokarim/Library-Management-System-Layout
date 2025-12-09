@@ -21,70 +21,18 @@
                 <th>Action</th>
             </thead>
             <tbody>
+                {% for catalog in allCatalogs %}
+                    
                 <tr>
-                    <th>001</th>
-                    <th>001</th>
-                    <th>20</th>
-                    <th>02-08-2025</th>
-                    <th>25-02-2024 10:39:36</th>
-                    <th><img src="images/icon/btn view.svg" alt=""></th>
+                    <th>{{catalog.id}}</th>
+                    <td>{{catalog.user_id}}</td>
+                    <td>{{catalog.amount}}</td>
+                    <td>{{catalog.due_date}}</td>
+                    <td>{{catalog.due_time}}</td>
+                    <td><img src="{{ url_for('static', filename='images/icon/btn view.svg') }}" alt=""></td>
                 </tr>
-                <tr>
-                    <th>001</th>
-                    <th>001</th>
-                    <th>20</th>
-                    <th>02-08-2025</th>
-                    <th>25-02-2024 10:39:36</th>
-                    <th><img src="images/icon/btn view.svg" alt=""></th>
-                </tr>
-                <tr>
-                    <th>001</th>
-                    <th>001</th>
-                    <th>20</th>
-                    <th>02-08-2025</th>
-                    <th>25-02-2024 10:39:36</th>
-                    <th><img src="images/icon/btn view.svg" alt=""></th>
-                </tr>
-                <tr>
-                    <th>001</th>
-                    <th>001</th>
-                    <th>20</th>
-                    <th>02-08-2025</th>
-                    <th>25-02-2024 10:39:36</th>
-                    <th><img src="images/icon/btn view.svg" alt=""></th>
-                </tr>
-                <tr>
-                    <th>001</th>
-                    <th>001</th>
-                    <th>20</th>
-                    <th>02-08-2025</th>
-                    <th>25-02-2024 10:39:36</th>
-                    <th><img src="images/icon/btn view.svg" alt=""></th>
-                </tr>
-                <tr>
-                    <th>001</th>
-                    <th>001</th>
-                    <th>20</th>
-                    <th>02-08-2025</th>
-                    <th>25-02-2024 10:39:36</th>
-                    <th><img src="images/icon/btn view.svg" alt=""></th>
-                </tr>
-                <tr>
-                    <th>001</th>
-                    <th>001</th>
-                    <th>20</th>
-                    <th>02-08-2025</th>
-                    <th>25-02-2024 10:39:36</th>
-                    <th><img src="images/icon/btn view.svg" alt=""></th>
-                </tr>
-                <tr>
-                    <th>001</th>
-                    <th>001</th>
-                    <th>20</th>
-                    <th>02-08-2025</th>
-                    <th>25-02-2024 10:39:36</th>
-                    <th><img src="images/icon/btn view.svg" alt=""></th>
-                </tr>
+                {% endfor %}
+                
             </tbody>
         </table>
     </div>

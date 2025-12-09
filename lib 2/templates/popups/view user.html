@@ -1,51 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'popups/add base.html' %}
+{% block box %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/style.css">
-</head>
-
-<body>
-    <div class="add_book v_book">
-        <div class="box">
-            <div class="adb_head">
-                <div class="book_img">
-                    <img src="/images/icon/book-1 1.svg" alt="">
-                </div>
-                <h4>View User</h4>
-                <img class="adb_exit" src="/images/icon/close-square 1.svg" alt="">
-            </div>
-            <hr>
-            <div class="disp_book">
-                <div class="dbook_info">
-                    <div>User ID: 1</div>
-                    <hr>
-                    <div>Name: Asad Mokarim</div>
-                    <hr>
-                    <div>Email : asadmokarim@gmail.com</div>
-                    <hr>
-                    <div>Username: asadmokarim</div>
-                    <hr>
-                </div>
-                <img src="/images/icon/Line 25.svg" alt="">
-                <div class="dbook_saved_by">
-                    Saved by:
-                    <br>
-                    <br>
-                    Nisal Gunasekara
-                    <br>
-                    (Admin)
-                </div>
-            </div>
-            <div class="adb_footer vb_footer">
-                <div>CLOSE</div>
-            </div>
-
-        </div>
+<div class="adb_head">
+    <div class="book_img">
+        <img src="{{ url_for('static', filename='images/icon/book-1 1.svg') }}" alt="">
     </div>
-</body>
+    <h4>View User</h4>
+    <img class="adb_exit" src="{{ url_for('static', filename='images/icon/close-square 1.svg') }}" alt="">
+</div>
+<hr>
+<div class="disp_book">
+    <div class="dbook_info">
+        <div>User ID: {{user.id}}</div>
+        <hr>
+        <div>Name: {{user.name}}</div>
+        <hr>
+        <div>Email : {{user.email}}</div>
+        <hr>
+        <div>Username: {{user.username}}</div>
+        <hr>
+    </div>
+    <img src="{{ url_for('static', filename='images/icon/Line 25.svg') }}" alt="">
+    <div class="dbook_saved_by">
+        Saved by:
+        <br>
+        <br>
+        Nisal Gunasekara
+        <br>
+        (Admin)
+    </div>
+</div>
+<div class="adb_footer vb_footer" onclick="document.location.href ='/users'">
+    <div>CLOSE</div>
+</div>
 
-</html>
+{% endblock box %}
+
+{% block add_user %}v_book {% endblock add_user %}

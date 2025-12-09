@@ -16,8 +16,12 @@
 
             {% endblock box %}
             <div class="adb_footer">
+                {% if btn %}
                 <a href="{% block add_base_cancel %}{% endblock add_base_cancel %}">CANCEL</a>
                 <div><button type="submit">{{btn}}</button></div>
+                {% else %}
+                    
+                {% endif %}
             </div>
         </form>
     </div>
