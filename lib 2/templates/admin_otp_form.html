@@ -5,21 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BookWorm</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
 <body>
     <section class="admin_otp_form">
         <main class="otp_form">
             <a href="forgotpswd.html" class="back_left">Back</a>
-            <div class="logo"><img src="images/logo.png" alt=""></div>
+            <div class="logo"><img src="{{ url_for('static', filename='images/logo.png') }}" alt=""></div>
             <h1 class="title_of_page">Check your Mailbox</h1>
             <h5 class="title_caption">Please enter the OTP to proceed</h5>
             <input type="number" class="username" class="username_input" required placeholder="OTP">
-            <button class="black_btn" onclick="window.location.href='reset_psswd.html'">Verify</button>
+            <button class="black_btn" onclick="window.location.href='/reset_psswd'">Verify</button>
         </main>
         <div class="otp_side black_box_right">
-            <div class="logo_library"><img src="images/logo lib.png" alt=""></div>
+            <div class="logo_library"><img src="{{ url_for('static', filename='images/logo lib.png') }}" alt=""></div>
             <p>"Your premier digital library for borrowing and reading books"</p>
 
         </div>

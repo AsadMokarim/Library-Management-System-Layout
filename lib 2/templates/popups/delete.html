@@ -1,0 +1,23 @@
+{% extends 'popups/add base.html' %}
+{% block box %}
+
+<div class="adb_head">
+    <div class="book_img">
+        <img src="{{ url_for('static', filename='images/icon/trash 1.svg') }}" alt="">
+    </div>
+    <h3>Delete Confirmation</h3>
+    <img class="adb_exit" src="{{ url_for('static', filename='images/icon/close-square 1.svg') }}" alt="">
+</div>
+<hr>
+<div class="del_book_p">
+    <p>"Are you certain you wish to proceed with the deletion of the selected entry having id  = {{to_del.id}} ?"</p>
+</div>
+
+{% endblock box %}
+
+{% block add_base_cancel %}
+/{{page}}
+{% endblock add_base_cancel %}
+{% block add_base_url %}
+/delete/{{to_del.id}}/{{dbms}}  
+{% endblock add_base_url %}

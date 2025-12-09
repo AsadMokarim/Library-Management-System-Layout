@@ -1,0 +1,28 @@
+{% extends 'popups/add base.html' %}
+{% block box %}
+    
+
+<div class="adb_head">
+    <div class="book_img">
+        <img src="{{ url_for('static', filename='images/icon/people 3.svg') }}" alt="">
+    </div>
+    <h4>Update Branch</h4>
+    <img class="adb_exit" src="D:\Programming\Library Management System Layout\images\icon\close-square 1.svg" alt="">
+</div>
+<hr>
+<div class="adb_inputs">
+    <input type="text" placeholder="Name" id="adb_name" name = "name" value="{{branch.name}}">
+    <input type="number" placeholder="Contact No" id="adb_lang" name="contact_no" value="{{branch.contact_no}}">
+    <input type="text" placeholder="Location" id="adb_lang" name ="location" value="{{branch.location}}">
+</div>
+{% endblock box %}
+
+
+{% block add_base_cancel %}
+/branches
+{% endblock add_base_cancel %}
+
+
+{% block add_base_url %}
+/update_branch/{{branch.id}}
+{% endblock add_base_url %}

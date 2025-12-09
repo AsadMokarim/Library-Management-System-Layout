@@ -5,22 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BookWorm</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
 <body>
     <div class="reset_psswd_side black_box_left">
-        <div class="logo_library"><img src="images/logo lib.png" alt=""></div>
+        <div class="logo_library"><img src="{{ url_for('static', filename='images/logo lib.png') }}" alt=""></div>
         <p>"Your premier digital library for borrowing and reading books"</p>
     </div>
     <main class="reset_psswd white_box_right">
-        <a href="index.html" class="back_right">Back</a>
-        <div class="logo"><img src="images/logo.png" alt=""></div>
+        <a href="/" class="back_right">Back</a>
+        <div class="logo"><img src="{{ url_for('static', filename='images/logo.png') }}" alt=""></div>
         <h1 class="title_of_page">Reset Password</h1>
         <h5 class="title_caption">Please enter your new password</h5>
         <input type="password" id="username" class="username" required placeholder="New Password">
         <input type="password" id="username" class="username" required placeholder="Confirm Password">
-        <button class="black_btn" onclick="alert('Now Sign in with new password'); window.location.href='index.html'">Reset Password</button>
+        <button class="black_btn" onclick="alert('Now Sign in with new password'); window.location.href='/'">Reset Password</button>
     </main>
 </body>
 

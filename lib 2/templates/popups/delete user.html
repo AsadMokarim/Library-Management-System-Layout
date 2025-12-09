@@ -1,0 +1,14 @@
+{% extends 'popups/delete.html' %}
+
+
+{% block add_base_cancel %}
+/users
+{% endblock add_base_cancel %}
+
+
+
+{% block add_base_url %}
+/delete_user/{{user.id}}
+{% endblock add_base_url %}
+
+

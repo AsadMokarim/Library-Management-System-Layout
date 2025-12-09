@@ -860,6 +860,7 @@ BOOKS
     gap: 5px;
     cursor: pointer;
     transition: all 0.6s ease-in-out;
+    text-decoration: none;
 }
 
 .bk_content .bk_nav .bk_search {

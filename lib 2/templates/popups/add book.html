@@ -1,0 +1,27 @@
+{% extends 'popups/add base.html' %}
+{% block box %}
+
+<div class="adb_head">
+    <div class="book_img">
+        <img src="{{ url_for('static', filename='images/icon/book-1 1.svg') }}" alt="">
+    </div>
+    <h4>Add Book</h4>
+    <img class="adb_exit" src="{{ url_for('static', filename='images/icon/close-square 1.svg') }}" alt="">
+</div>
+<hr>
+<div class="adb_inputs">
+    <input type="text" placeholder="Name" id="adb_name" name="name">
+    <input type="text" placeholder="Language" id="adb_lang" name="language">
+    <div class="type_qty">
+        <input type="text" placeholder="Type" id="adb_type" name="type">
+        <input type="number" placeholder="Quantity" id="adb_qty" name="quantity">
+    </div>
+</div>
+{% endblock box %}
+
+{% block add_base_cancel %}
+/books
+{% endblock add_base_cancel %}
+{% block add_base_url %}
+/add_book   
+{% endblock add_base_url %}
