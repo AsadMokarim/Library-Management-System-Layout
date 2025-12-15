@@ -19,7 +19,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///default.db"
 app.config['SQLALCHEMY_BINDS'] = {
     "books":  "sqlite:///books.db",
     "users":  "sqlite:///users.db",
-    "branches": "sqlite:///branches.db",
+    "branches": "sqlite:///branches.db",    
     "catalog": "sqlite:///catalog.db"
 }
 
