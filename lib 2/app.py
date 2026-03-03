@@ -12,10 +12,8 @@ app = Flask(__name__)
 
 
 
-# Default DB (required even if you don’t use it)
 app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///default.db"
 
-# Your two extra databases
 app.config['SQLALCHEMY_BINDS'] = {
     "books":  "sqlite:///books.db",
     "users":  "sqlite:///users.db",
@@ -161,7 +159,7 @@ def add_book():
     if request.method == "POST":
         name = request.form['name']
         language = request.form['language']
-        book_type = request.form['type']
+        book_type = request.form['type'] 
         qty = request.form['quantity']
         newBook = Book(name = name,book_type = book_type,lang = language,quantity = qty)
         db.session.add(newBook)
